@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "686312323039",
+    "project_id": "global-fsm",
+    "storage_bucket": "global-fsm.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:686312323039:android:bf5075df517865c055f66a",
+        "android_client_info": {
+          "package_name": "com.globalfsm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "686312323039-v619b044creu6143q1vp32i09jsgpvls.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2Si5x-BLwC1ESIBAw296H714P8zQrFiY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "686312323039-v619b044creu6143q1vp32i09jsgpvls.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

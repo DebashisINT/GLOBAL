@@ -1,0 +1,11 @@
+package com.globalfsm.features.TA.model
+
+import com.globalfsm.base.BaseResponse
+
+/**
+ * Created by Pratishruti on 28-11-2017.
+ */
+class TaListResponse : BaseResponse() {
+   var data:TaListResponseData?=null
+
+}

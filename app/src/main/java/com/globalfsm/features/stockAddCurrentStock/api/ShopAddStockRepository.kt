@@ -1,0 +1,20 @@
+package com.globalfsm.features.stockAddCurrentStock.api
+
+import com.globalfsm.base.BaseResponse
+import com.globalfsm.features.location.model.ShopRevisitStatusRequest
+import com.globalfsm.features.location.shopRevisitStatus.ShopRevisitStatusApi
+import com.globalfsm.features.stockAddCurrentStock.ShopAddCurrentStockRequest
+import com.globalfsm.features.stockAddCurrentStock.model.CurrentStockGetData
+import com.globalfsm.features.stockCompetetorStock.model.CompetetorStockGetData
+import io.reactivex.Observable
+
+class ShopAddStockRepository (val apiService : ShopAddStockApi){
+    fun shopAddStock(shopAddCurrentStockRequest: ShopAddCurrentStockRequest?): Observable<BaseResponse> {
+        return apiService.submShopAddStock(shopAddCurrentStockRequest)
+    }
+
+    fun getCurrStockList(sessiontoken: String, user_id: String, date: String): Observable<CurrentStockGetData> {
+        return apiService.getCurrStockListApi(sessiontoken, user_id, date)
+    }
+
+}
