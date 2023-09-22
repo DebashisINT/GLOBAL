@@ -3,6 +3,10 @@ package com.globalfsm.features.lead.api
 import com.globalfsm.base.BaseResponse
 import com.globalfsm.features.NewQuotation.model.AddQuotRequestData
 import com.globalfsm.features.lead.model.*
+import com.globalfsm.features.taskManagement.AddTaskReq
+import com.globalfsm.features.taskManagement.EditTaskReq
+import com.globalfsm.features.taskManagement.TaskViewRes
+import com.globalfsm.features.taskManagement.model.TaskListReq
 import io.reactivex.Observable
 
 class GetLeadListRegRepository(val apiService : GetLeadListApi) {
@@ -21,6 +25,22 @@ class GetLeadListRegRepository(val apiService : GetLeadListApi) {
 
     fun getActivityList(crm_id: String): Observable<ActivityViewRes> {
         return apiService.viewActivityList(crm_id)
+    }
+
+    fun TaskList(list: TaskListReq): Observable<TaskResponse> {
+        return apiService.getTaskList(list)
+    }
+
+    fun submitTask(list: AddTaskReq): Observable<BaseResponse> {
+        return apiService.submitTaskListAPI(list)
+    }
+
+    fun getTaskList(task_id: String): Observable<TaskViewRes> {
+        return apiService.viewTaskList(task_id)
+    }
+
+    fun editTask(obj: EditTaskReq): Observable<BaseResponse> {
+        return apiService.editTaskAPI(obj)
     }
 
 }

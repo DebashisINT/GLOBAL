@@ -1,9 +1,11 @@
 package com.globalfsm.features.addAttendence.api.routeapi
 
 import com.globalfsm.app.Pref
+import com.globalfsm.features.addAttendence.model.AreaListResponse
 import com.globalfsm.features.addAttendence.model.DistanceResponseModel
 import com.globalfsm.features.addAttendence.model.LocationListResponseModel
 import com.globalfsm.features.addAttendence.model.RouteResponseModel
+import com.globalfsm.features.addAttendence.model.VisitLocationListResponse
 import io.reactivex.Observable
 
 /**
@@ -16,6 +18,14 @@ class RouteRepo(val apiService: RouteApi) {
 
     fun getLocList(): Observable<LocationListResponseModel> {
         return apiService.getLocationList(Pref.session_token!!, Pref.user_id!!)
+    }
+
+    fun getAreaList(): Observable<AreaListResponse> {
+        return apiService.getAreaList(Pref.session_token!!, Pref.user_id!!,Pref.profile_city!!)
+    }
+
+    fun getVisitLocationList(): Observable<VisitLocationListResponse> {
+        return apiService.getVisitLocationList(Pref.session_token!!)
     }
 
     fun getDistance(from_id: String, to_id: String): Observable<DistanceResponseModel> {
